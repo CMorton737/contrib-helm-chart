@@ -244,10 +244,20 @@ server:
   podAnnotations: {}
 
 service:
+  # service.annotations -- Service annotations
+  annotations:
+    {}
+    
   # service.type -- Kubernetes Service type
   type: ClusterIP
   # service.port -- Service external port
   port: 80
+  # service.loadBalancerIP -- IP address to assign to load balancer (if supported)
+  loadBalancerIP: 
+  # service.loadBalancerSourceRanges -- list of IP CIDRs allowed access to lb (if supported)
+  loadBalancerSourceRanges:
+    []
+
 
 ingress:
   # ingress.enabled -- Enable ingress controller resource
